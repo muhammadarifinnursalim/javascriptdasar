@@ -1,0 +1,93 @@
+<!-- Manipulasi -->
+<!-- HTML -->
+<button id="tombolSapa">Sapa</button>
+<div id="output"></div>
+
+<script>
+    // JavaScript
+    // Selector
+    const tombol = document.getElementById("tombolSapa");
+    const outputDiv = document.getElementById("output");
+
+    // Event Handling
+    tombol.addEventListener("click", () => {
+        outputDiv.innerHTML = "Halo, dunia!";
+    });
+</script>
+
+<!-- 2  Mengubah Teks dan Atribut Elemen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi DOM</title>
+</head>
+<body>
+    <h1 id="judul">Selamat Datang!</h1>
+    <img id="gambar" src="https://via.placeholder.com/150" alt="Contoh Gambar">
+
+    <script>
+        // Mengubah teks elemen
+        const judul = document.getElementById("judul");
+        judul.innerText = "Halo, Dunia!"; // Mengubah teks dari h1 dengan id 'judul'
+
+        // Mengubah atribut elemen
+        const gambar = document.getElementById("gambar");
+        gambar.src = "https://via.placeholder.com/300"; // Mengubah sumber gambar
+        gambar.alt = "Gambar Baru"; // Mengubah teks alternatif gambar
+    </script>
+</body>
+</html>
+
+<!-- 3 Menambahkan dan Menghapus Elemen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi DOM</title>
+</head>
+<body>
+    <div id="kontainer"></div>
+    <button id="tambah">Tambah Paragraf</button>
+
+    <script>
+        const kontainer = document.getElementById("kontainer");
+        const tombolTambah = document.getElementById("tambah");
+
+        // Fungsi untuk menambah elemen paragraf baru
+        tombolTambah.addEventListener("click", () => {
+            const paragrafBaru = document.createElement("p"); // Buat elemen paragraf baru
+            paragrafBaru.innerText = "Paragraf baru ditambahkan!";
+            kontainer.appendChild(paragrafBaru); // Tambahkan paragraf baru ke dalam div kontainer
+        });
+    </script>
+</body>
+</html>
+
+<!-- 4 Mengubah Gaya (CSS) Elemen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi DOM</title>
+</head>
+<body>
+    <h1 id="judul">Gaya Dinamis</h1>
+    <button id="ubahWarna">Ubah Warna</button>
+
+    <script>
+        const judul = document.getElementById("judul");
+        const tombolWarna = document.getElementById("ubahWarna");
+
+        // Mengubah warna teks saat tombol diklik
+        tombolWarna.addEventListener("click", () => {
+            judul.style.color = "blue";      // Mengubah warna teks
+            judul.style.fontSize = "2em";    // Mengubah ukuran font
+            judul.style.fontStyle = "italic"; // Mengubah font style menjadi miring
+        });
+    </script>
+</body>
+</html>

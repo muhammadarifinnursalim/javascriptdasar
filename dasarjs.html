@@ -1,0 +1,45 @@
+// 1. Variabel
+// Mendeklarasikan variabel dengan var, let, dan const
+var nama = "Budi";        // var: dapat diubah dan memiliki cakupan global atau function
+let umur = 25;            // let: dapat diubah dan memiliki cakupan block
+const hobi = "Memasak";   // const: tidak dapat diubah (constant)
+
+// 2. Tipe Data
+let tinggi = 1.75;        // Number
+let sudahMenikah = false; // Boolean
+let alamat = null;        // Null
+let pekerjaan;            // Undefined (belum didefinisikan)
+let teman = ["Andi", "Sari", "Rani"]; // Array
+let biodata = {           // Object
+    nama: "Budi",
+    umur: 25,
+    hobi: "Memasak"
+};
+
+// 3. Operator
+// Operator Aritmatika
+let a = 10;
+let b = 5;
+let hasilTambah = a + b;     // 15
+let hasilKurang = a - b;     // 5
+let hasilKali = a * b;       // 50
+let hasilBagi = a / b;       // 2
+let hasilModulus = a % b;    // 0 (sisa bagi)
+
+// Operator Perbandingan
+let x = 10;
+let y = "10";
+console.log(x == y);    // true (sama nilai, tipe data tidak dipedulikan)
+console.log(x === y);   // false (nilai dan tipe data berbeda)
+console.log(x != y);    // false (nilai sama)
+console.log(x !== y);   // true (nilai sama, tapi tipe data berbeda)
+console.log(x > 5);     // true
+console.log(x < 5);     // false
+
+// Operator Logika
+let benar = true;
+let salah = false;
+
+console.log(benar && salah); // false (AND: keduanya harus true)
+console.log(benar || salah); // true (OR: salah satu true)
+console.log(!benar);         // false (NOT: membalik nilai)

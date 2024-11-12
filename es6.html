@@ -1,0 +1,24 @@
+// let dan const
+let nilai = 10;
+const pi = 3.14; // pi tidak dapat diubah
+
+// Template Literals
+let nama = "Budi";
+let pesan = `Halo, ${nama}! Selamat datang.`;
+console.log(pesan); // Output: "Halo, Budi! Selamat datang."
+
+// Destructuring
+let orang = { nama: "Andi", umur: 25, pekerjaan: "Guru" };
+let { nama: namaOrang, umur, pekerjaan } = orang;
+console.log(namaOrang); // Output: "Andi"
+
+// Spread dan Rest Operator
+let angka1 = [1, 2, 3];
+let angka2 = [4, 5, 6];
+let gabungan = [...angka1, ...angka2]; // Menggabungkan array
+console.log(gabungan); // Output: [1, 2, 3, 4, 5, 6]
+
+function hitung(...angka) { // Menggunakan rest parameter untuk menerima sejumlah nilai
+    return angka.reduce((total, num) => total + num, 0);
+}
+console.log(hitung(1, 2, 3, 4)); // Output: 10

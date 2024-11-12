@@ -1,0 +1,40 @@
+// Array
+let buah = ["apel", "jeruk", "mangga"];
+
+// Akses elemen array
+console.log(buah[0]); // Output: "apel"
+
+// Menambah elemen ke array
+buah.push("pisang");
+console.log(buah); // Output: ["apel", "jeruk", "mangga", "pisang"]
+
+// Menghapus elemen terakhir dari array
+buah.pop();
+console.log(buah); // Output: ["apel", "jeruk", "mangga"]
+
+// Array methods: map, filter, reduce
+let angka = [1, 2, 3, 4, 5];
+let angkaDikaliDua = angka.map(num => num * 2);
+console.log(angkaDikaliDua); // Output: [2, 4, 6, 8, 10]
+
+// Filter hanya angka yang lebih besar dari 2
+let angkaLebihBesarDariDua = angka.filter(num => num > 2);
+console.log(angkaLebihBesarDariDua); // Output: [3, 4, 5]
+
+// Reduce: Menjumlahkan semua angka dalam array
+let jumlah = angka.reduce((acc, num) => acc + num, 0);
+console.log(jumlah); // Output: 15
+
+// Objek
+let orang = {
+    nama: "Budi",
+    umur: 30,
+    pekerjaan: "Programmer"
+};
+
+// Akses properti objek
+console.log(orang.nama); // Output: "Budi"
+
+// Menambah properti baru
+orang.alamat = "Jakarta";
+console.log(orang); // Output: {nama: "Budi", umur: 30, pekerjaan: "Programmer", alamat: "Jakarta"}

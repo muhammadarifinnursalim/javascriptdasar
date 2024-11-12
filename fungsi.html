@@ -1,0 +1,57 @@
+// 1. Deklarasi Fungsi dengan cara biasa
+function sapa(nama) {
+    return "Halo, " + nama + "!";
+}
+
+console.log(sapa("Budi")); 
+// Output: "Halo, Budi!"
+
+// 2. Fungsi dengan Arrow Function
+const sapaArrow = (nama) => {
+    return "Halo, " + nama + "!";
+};
+
+console.log(sapaArrow("Andi")); 
+// Output: "Halo, Andi!"
+
+// Fungsi arrow dengan sintaks singkat (jika hanya ada satu ekspresi)
+const sapaArrowSingkat = (nama) => "Halo, " + nama + "!";
+
+console.log(sapaArrowSingkat("Rina"));
+// Output: "Halo, Rina!"
+
+// 3. Parameter dan Return
+function tambah(a, b) {
+    return a + b; // Mengembalikan hasil penjumlahan dari a dan b
+}
+
+let hasilTambah = tambah(5, 3);
+console.log("Hasil Penjumlahan: " + hasilTambah); 
+// Output: "Hasil Penjumlahan: 8"
+
+// 4. Scope (Cakupan Variabel)
+function testScope() {
+    let lokal = "Variabel lokal"; // Variabel lokal, hanya bisa diakses di dalam fungsi ini
+    console.log(lokal);
+}
+
+testScope(); 
+// Output: "Variabel lokal"
+
+// console.log(lokal); // Ini akan menghasilkan error, karena `lokal` hanya ada di dalam fungsi testScope()
+
+// 5. Closure (Fungsi di dalam fungsi yang mengingat lingkungan sekitarnya)
+function buatPenghitung() {
+    let hitung = 0; // Variabel lokal di fungsi `buatPenghitung`
+
+    return function() {
+        hitung++; // Mengakses variabel `hitung` dari luar fungsi ini
+        return hitung;
+    };
+}
+
+const penghitung = buatPenghitung(); // Membuat fungsi penghitung baru
+console.log(penghitung()); // Output: 1
+console.log(penghitung()); // Output: 2
+console.log(penghitung()); // Output: 3
+// Variabel `hitung` tetap ada di dalam closure meskipun fungsi `buatPenghitung` telah selesai dijalankan

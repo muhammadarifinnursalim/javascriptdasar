@@ -1,0 +1,87 @@
+// 1. Percabangan (if, else if, else)
+let nilai = 85;
+
+if (nilai >= 90) {
+    console.log("Nilai Anda A");
+} else if (nilai >= 80) {
+    console.log("Nilai Anda B");
+} else if (nilai >= 70) {
+    console.log("Nilai Anda C");
+} else if (nilai >= 60) {
+    console.log("Nilai Anda D");
+} else {
+    console.log("Nilai Anda E");
+}
+// Output: "Nilai Anda B" karena nilai adalah 85
+
+// 2. Switch Statement
+let hari = 3;
+let namaHari;
+
+switch (hari) {
+    case 1:
+        namaHari = "Senin";
+        break;
+    case 2:
+        namaHari = "Selasa";
+        break;
+    case 3:
+        namaHari = "Rabu";
+        break;
+    case 4:
+        namaHari = "Kamis";
+        break;
+    case 5:
+        namaHari = "Jumat";
+        break;
+    case 6:
+        namaHari = "Sabtu";
+        break;
+    case 7:
+        namaHari = "Minggu";
+        break;
+    default:
+        namaHari = "Hari tidak valid";
+}
+
+console.log("Hari ini adalah " + namaHari);
+// Output: "Hari ini adalah Rabu"
+
+// 3. Looping (for)
+for (let i = 1; i <= 5; i++) {
+    console.log("Perulangan ke-" + i);
+}
+// Output:
+// Perulangan ke-1
+// Perulangan ke-2
+// Perulangan ke-3
+// Perulangan ke-4
+// Perulangan ke-5
+
+// 4. Looping (while)
+let count = 1;
+
+while (count <= 5) {
+    console.log("Hitungan: " + count);
+    count++;
+}
+// Output:
+// Hitungan: 1
+// Hitungan: 2
+// Hitungan: 3
+// Hitungan: 4
+// Hitungan: 5
+
+// 5. Looping (do...while)
+let angka = 1;
+
+do {
+    console.log("Angka: " + angka);
+    angka++;
+} while (angka <= 5);
+// Output:
+// Angka: 1
+// Angka: 2
+// Angka: 3
+// Angka: 4
+// Angka: 5

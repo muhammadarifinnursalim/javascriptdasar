@@ -1,0 +1,17 @@
+// Menggunakan console.log() untuk debugging
+let nilaiA = 10;
+let nilaiB = 20;
+
+console.log("Nilai A:", nilaiA); // Output: Nilai A: 10
+console.log("Nilai B:", nilaiB); // Output: Nilai B: 20
+
+// Jika ada kesalahan
+function bagi(a, b) {
+    if (b === 0) {
+        console.error("Error: Pembagi tidak boleh 0!"); // Menggunakan console.error untuk menampilkan pesan kesalahan
+        return null;
+    }
+    return a / b;
+}
+
+bagi(10, 0); // Output: Error: Pembagi tidak boleh 0!

@@ -1,0 +1,37 @@
+// Callback
+function lakukanTugas(callback) {
+    console.log("Sedang melakukan tugas...");
+    callback();
+}
+
+lakukanTugas(() => {
+    console.log("Tugas selesai!");
+});
+
+// Promises
+function janjiContoh() {
+    return new Promise((resolve, reject) => {
+        let berhasil = true;
+        if (berhasil) {
+            resolve("Tugas berhasil!");
+        } else {
+            reject("Tugas gagal.");
+        }
+    });
+}
+
+janjiContoh()
+    .then(hasil => console.log(hasil)) // Output jika berhasil: "Tugas berhasil!"
+    .catch(error => console.log(error)); // Output jika gagal: "Tugas gagal."
+
+// Async/Await
+async function jalankanJanji() {
+    try {
+        let hasil = await janjiContoh();
+        console.log(hasil);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+jalankanJanji(); // Output: "Tugas berhasil!"
